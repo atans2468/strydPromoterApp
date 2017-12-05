@@ -1,0 +1,73 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Review</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color: rgb(51,51,51); color: #fff;">
+  <!--<div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>-->
+
+  <!--<div class="item-detail" padding>
+    <h2>{{item.name}}</h2>
+    <p>{{item.about}}</p>
+    <p>{{item.venue}}</p>
+  </div>-->
+
+  <div class="item-detail">
+    <ion-thumbnail item-start style="float: left; margin-right: 10px;">
+      <img [src]="item.profilePic" style="width: 100px; height: 125px;" />
+    </ion-thumbnail>
+    <h3>{{item.name}}</h3>
+    <p>{{item.date}}</p>
+    <p>Doors at {{item.doors}}</p>
+    <p>{{item.venue}}</p>
+    <p>{{item.ages}}</p>
+    
+    <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+
+  </div>
+
+  <ion-list style="color: #fff;">
+    
+    <ion-item class="transparentBackground">
+      <ion-input class="whiteFont" type="text" placeholder="First Name"></ion-input>
+      <ion-input class="whiteFont" type="text" placeholder="Last Name"></ion-input>
+    </ion-item>
+
+    <ion-item class="transparentBackground">
+      <ion-input class="whiteFont" type="date" placeholder="Date of Birth"></ion-input>
+    </ion-item>
+
+    <ion-item class="transparentBackground">
+      <ion-input class="whiteFont" type="email" placeholder="Email Address"></ion-input>
+    </ion-item>
+
+    <ion-item class="transparentBackground">
+      <ion-input class="whiteFont" type="number" placeholder="Phone Number"></ion-input>
+    </ion-item>
+
+    <ion-item class="transparentBackground">
+      <ion-label class="whiteFont">Payment Type</ion-label>
+      <ion-select [(ngModel)]="paymentType" class="whiteFont">
+        <ion-option value="venmo">Venmo</ion-option>
+        <ion-option value="creditCard" selected>Credit Card</ion-option>
+        <ion-option value="googleWallet">Google Wallet</ion-option>
+        <ion-option value="payPal">PayPal</ion-option>
+        <ion-option value="bitPay">BitPay</ion-option>
+        <ion-option value="cash">Cash</ion-option>
+      </ion-select>
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-row>
+    <ion-col col-12 style="text-align: center;">
+      <button ion-button color="secondary" round style="width: 70%;" (click)="openModal({charNum: 0})"><b>Select</b></button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

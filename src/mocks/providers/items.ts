@@ -19,7 +19,7 @@ export class Items {
       {
         "name": "Dillon Francis",
         "flierImg": "assets/img/eventArt/dillonFrancis.jpg",
-        "coverPhoto": "assets/img/eventArt/midnightMadness.jpg",
+        "coverPhoto": "assets/img/eventArt/coverPhoto/dillonCover.jpg",
         "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
         "date": "12/15/17",
         "venue": "Liquid",
@@ -28,6 +28,11 @@ export class Items {
         "address": "624 University Ave, Madison, WI 53715",
         "phoneNumber": "(608) 257-1122",
         "emailAddress": "info@liquidmadison.com",
+        "presenter": "Live Nation",
+        "opener1": "Antics",
+        "opener2": "DaVilla",
+        "opener3": "",
+        "opener4": "",
         "ticketTier1": {
           "name": "General Admission",
           "location": "Main Floor",

@@ -12,6 +12,28 @@ import { Item } from '../../models/item';
   templateUrl: 'item-detail.html'
 })
 export class ItemDetailPage {
+  
+  //accordion
+  tiers = [
+    { name: "General Admission", location: "Main Floor", price: "$25.50"},
+    { name: "General Admission", location: "Upper Deck", price: "$30.50"},
+    { name: "VIP Admission", location: "Opera Box", price: "$70.25"},
+  ];
+
+  shownGroup = 0;
+
+  toggleGroup(group) {
+    if (this.isGroupShown(group)) {
+        this.shownGroup = null;
+    } else {
+        this.shownGroup = group;
+    }
+  };
+  isGroupShown(group) {
+      return this.shownGroup === group;
+  };
+  //end of accordion
+  
   item: any;
 
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {

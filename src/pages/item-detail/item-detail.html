@@ -32,6 +32,12 @@
   </ion-row>
   <!-- end of cover photo -->
 
+
+  <!-- 
+    this is the tier accordion section with a counter to increment/decrement tickets
+    the styling needs to be moved over to item-detail.scss and the counter needs 
+    to be seperated for each category...not going to worry about that for now 
+  -->
   <ion-list>
     <ion-item *ngFor="let t of tiers; let i=index" text-wrap [ngClass]="{active: isGroupShown(i)}" style="text-align: center; padding: 0px;">
       <h3 (click)="toggleGroup(i)" style="color: #aaa;">{{t.name}} - {{t.location}}</h3>
@@ -45,13 +51,15 @@
       
     </ion-item>
   </ion-list>
+  <!-- end
+  
+  <!-- this button needs to be redone as it is absolutely positioned and won't work when the page needs to scroll -->
+  <ion-row style="position: absolute; bottom: 0px; width: 100%; height: 40px; text-align: center;">
+    <ion-col col-12 style="background-color: #02b1ef; height: 100%; padding: 0px;">
+        <button ion-button full clear (click)="openItem(item)" style="margin: 0px; padding-left: 5px; height: 100%; color: #fff;">
+          SELL {{counter}} TICKETS
+        </button>
+    </ion-col>
+  </ion-row>
 
 </ion-content>
-
-<ion-row style="width: 100%; height: 40px; text-align: center;">
-  <ion-col col-12 style="background-color: #02b1ef; height: 100%; padding: 0px;">
-      <button ion-button full clear (click)="openItem(item)" style="margin: 0px; padding-left: 5px; height: 100%; color: #fff;">
-        SELL TICKETS
-      </button>
-  </ion-col>
-</ion-row>

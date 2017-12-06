@@ -13,11 +13,12 @@ import { Item } from '../../models/item';
 })
 export class ItemDetailPage {
   
+
   //accordion
   tiers = [
-    { name: "General Admission", location: "Main Floor", price: "$25.50"},
-    { name: "General Admission", location: "Upper Deck", price: "$30.50"},
-    { name: "VIP Admission", location: "Opera Box", price: "$70.25"},
+    { name: "General Admission", location: "Main Floor", price: "25.50"},
+    { name: "General Admission", location: "Upper Deck", price: "30.50"},
+    { name: "VIP Admission", location: "Opera Box", price: "70.25"},
   ];
 
   shownGroup = 0;
@@ -34,11 +35,27 @@ export class ItemDetailPage {
   };
   //end of accordion
   
-  item: any;
 
+  //retrieve data from items.ts carried over from list-master
+  item: any;
+  //data retrieved
+
+
+  public counter : number = 0;
+  
+  increment(){
+    this.counter += 1;
+  }
+  
+  decrement(){
+    this.counter -= 1;
+  }
+  
+  
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {
     this.item = navParams.get('item') || items.defaultItem;
   }
+
 
   /**
    * Navigate to the detail page for this item.

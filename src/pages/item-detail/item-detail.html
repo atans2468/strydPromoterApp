@@ -33,11 +33,16 @@
   <!-- end of cover photo -->
 
   <ion-list>
-    <ion-item *ngFor="let t of tiers; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}" style="text-align: center;">
-      <h3>{{t.name}} - {{t.location}}
-      <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
-      </h3>
-      <div *ngIf="isGroupShown(i)">{{item.opener1}}</div>
+    <ion-item *ngFor="let t of tiers; let i=index" text-wrap [ngClass]="{active: isGroupShown(i)}" style="text-align: center; padding: 0px;">
+      <h3 (click)="toggleGroup(i)" style="color: #aaa;">{{t.name}} - {{t.location}}</h3>
+      <h5 *ngIf="isGroupShown(i)" (click)="toggleGroup(i)">${{t.price}} x 1</h5>
+
+      <div *ngIf="isGroupShown(i)" style="color: #aaa; padding-top: 5%;">
+        <button (click)="decrement()"><ion-icon name="md-remove" style="font-size: 48px; color: #02b1ef;"></ion-icon></button>  
+          <h1 style="display: inline; font-size: 48px; margin-right: 5%; margin-left: 5%;">{{counter}}</h1>
+        <button (click)="increment()"><ion-icon name="md-add" style="font-size: 48px; color: #02b1ef;"></ion-icon></button>
+      </div>
+      
     </ion-item>
   </ion-list>
 

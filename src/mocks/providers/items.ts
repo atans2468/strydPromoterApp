@@ -9,7 +9,7 @@ export class Items {
 
   defaultItem: any = {
     "name": "Liquid",
-    "profilePic": "assets/img/speakers/bear.jpg",
+    "flierImg": "assets/img/speakers/bear.jpg",
     "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
   };
 
@@ -17,10 +17,11 @@ export class Items {
   constructor(public http: Http) {
     let items = [
       {
-        "name": "Midnight Madness",
-        "profilePic": "assets/img/eventArt/midnightMadness.jpg",
+        "name": "Dillon Francis",
+        "flierImg": "assets/img/eventArt/dillonFrancis.jpg",
+        "coverPhoto": "assets/img/eventArt/midnightMadness.jpg",
         "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
-        "date": "10/20/17",
+        "date": "12/15/17",
         "venue": "Liquid",
         "doors": "10pm",
         "ages": "21+",
@@ -30,17 +31,17 @@ export class Items {
         "ticketTier1": {
           "name": "General Admission",
           "location": "Main Floor",
-          "price": "$15.50"
+          "price": "$25.50"
         },
         "ticketTier2": {
           "name": "General Admission",
           "location": "Upper Deck",
-          "price": "$20.50"
+          "price": "$30.50"
         },
         "ticketTier3": {
           "name": "VIP Admission",
           "location": "Opera Box",
-          "price": "$60.25"
+          "price": "$70.25"
         },
         "ticketTier4": {
           "name": "",
@@ -54,30 +55,69 @@ export class Items {
         }
       },
       {
-        "name": "Dillon Francis",
-        "profilePic": "assets/img/eventArt/dillonFrancis.jpg",
+        "name": "Beyonce",
+        "flierImg": "assets/img/eventArt/beyonceProf.jpg",
+        "coverPhoto": "assets/img/eventArt/beyonceProf.jpg",
         "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
-        "date": "10/27/17",
-        "venue": "Liquid",
-        "doors": "10pm",
-        "ages": "21+",
+        "date": "12/16/17",
+        "venue": "Civic Center",
+        "doors": "8:30pm",
+        "ages": "All Ages",
         "address": "624 University Ave, Madison, WI 53715",
         "phoneNumber": "(608) 257-1122",
         "emailAddress": "info@liquidmadison.com",
         "ticketTier1": {
           "name": "General Admission",
           "location": "Main Floor",
-          "price": "$15.50"
+          "price": "$35.50"
         },
         "ticketTier2": {
           "name": "General Admission",
           "location": "Upper Deck",
-          "price": "$20.50"
+          "price": "$40.50"
         },
         "ticketTier3": {
           "name": "VIP Admission",
           "location": "Opera Box",
-          "price": "$60.25"
+          "price": "$80.25"
+        },
+        "ticketTier4": {
+          "name": "",
+          "location": "",
+          "price": ""
+        },
+        "ticketTier5": {
+          "name": "",
+          "location": "",
+          "price": ""
+        }
+      },
+      {
+        "name": "Zhu",
+        "flierImg": "assets/img/eventArt/zhuProf.jpg",
+        "coverPhoto": "assets/img/eventArt/zhuProf.jpg",
+        "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
+        "date": "12/22/17",
+        "venue": "Orpheum Theater",
+        "doors": "10:30pm",
+        "ages": "18+",
+        "address": "624 University Ave, Madison, WI 53715",
+        "phoneNumber": "(608) 257-1122",
+        "emailAddress": "info@liquidmadison.com",
+        "ticketTier1": {
+          "name": "General Admission",
+          "location": "Main Floor",
+          "price": "$35.50"
+        },
+        "ticketTier2": {
+          "name": "General Admission",
+          "location": "Upper Deck",
+          "price": "$40.50"
+        },
+        "ticketTier3": {
+          "name": "VIP Admission",
+          "location": "Opera Box",
+          "price": "$80.25"
         },
         "ticketTier4": {
           "name": "",

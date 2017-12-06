@@ -2,22 +2,21 @@
 
   <ion-navbar>
     <!--<ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>-->
-    <!--<ion-title>Events</ion-title>-->
     <ion-title><img src="../../assets/img/strydLogo.jpg" style="height: 50%; width: 60%;" /></ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content >
+<ion-content style="padding-left: 0px; background-color: #d8d9da">
 
-  <ion-card *ngFor="let item of currentItems">
+  <ion-card *ngFor="let item of currentItems" style="width: 100%; margin-left: 0px; margin-top: 6px; margin-bottom: 0px;">
 
     <ion-row style="padding: 0px;">
-      <ion-col col-5 style="height: 100%; padding: 0px; margin: 0px;">
-        <img [src]="item.profilePic" style="width: 100%; height: 100%;" />
+      <ion-col col-5 style="height: 150px; padding: 0px; margin: 0px;">
+        <img [src]="item.flierImg" style="width: 100%; height: 100%;" />
       </ion-col>
       <ion-col col-7 style="height: 100%; width: 100%;">
-        <h2>{{item.name}}</h2>
+        <h2><b>{{item.name}}</b></h2>
         <p>{{item.date}}</p>
         <p>Doors at {{item.doors}}</p>
         <p>{{item.venue}}</p>
@@ -28,9 +27,11 @@
 
     <ion-row>
       <ion-col col-12 style="background-color: #02b1ef; height: 30px; padding: 0px;">
-          <button ion-button full icon-left clear flex-start class="sellTicketsButton" (click)="openItem(item)" style="margin: 0px; padding-left: 5px; height: 100%; color: #fff;">
-            <ion-icon name="pricetag" style="margin-left: 0px;"></ion-icon>
+          <button ion-button full clear flex-start class="sellTicketsButton" (click)="openItem(item)" style="margin: 0px; padding-left: 5px; height: 100%; color: #fff;">
+            <ion-icon name="pricetag" style="margin-right: 5px;"></ion-icon>
             SELL TICKETS
+            <!-- need to control the alignment differently with this icon...right now just pushing it with the margin -->
+            <ion-icon name="arrow-forward-outline" style="margin-left: 55%;"></ion-icon>
           </button>
       </ion-col>
     </ion-row>

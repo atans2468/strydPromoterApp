@@ -1,11 +1,11 @@
 page-list-master {
 
-}
+    ion-card {
+        box-shadow: -6px 8px 10px -4px #999;
+    }
+    
+    .sellTicketsButton .button-inner{
+        justify-content:flex-start;
+    }
 
-ion-card {
-    box-shadow: -6px 8px 10px -4px #999;
-}
-
-.sellTicketsButton .button-inner{
-    justify-content:flex-start;
 }

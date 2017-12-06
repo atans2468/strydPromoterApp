@@ -7,6 +7,8 @@ import { Item } from '../../models/item';
 
 import { ListMasterPage } from '../list-master/list-master';
 
+import { TabsPage } from '../tabs/tabs';
+
 @Component({
   selector: 'page-item-review',
   templateUrl: 'item-review.html'
@@ -86,7 +88,7 @@ export class ModalContentPage {
 
   goToMyPage() {
     // go to the MyPage component
-    this.nav.setRoot(ListMasterPage);
+    this.nav.setRoot(TabsPage);
   }
 
   dismiss() {

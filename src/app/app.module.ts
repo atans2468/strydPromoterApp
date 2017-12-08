@@ -12,6 +12,10 @@ import { LoginPage } from '../pages/login/login';
 import { ListMasterPage } from '../pages/list-master/list-master';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { ItemReviewPage } from '../pages/item-review/item-review';
+import { VenuesPage } from '../pages/venues/venues';
+import { MarketingPage } from '../pages/marketing/marketing';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { ProfilePage } from '../pages/profile/profile';
 import { ModalContentPage } from '../pages/item-review/item-review';
 
 import { Items } from '../mocks/providers/items';
@@ -30,6 +34,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListMasterPage,
     LoginPage,
     ItemReviewPage,
+    VenuesPage,
+    MarketingPage,
+    NotificationsPage,
+    ProfilePage,
     ModalContentPage
   ],
   imports: [
@@ -48,6 +56,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListMasterPage,
     LoginPage,
     ItemReviewPage,
+    VenuesPage,
+    MarketingPage,
+    NotificationsPage,
+    ProfilePage,
     ModalContentPage
   ],
   providers: [

@@ -33,31 +33,17 @@ export class Items {
         "opener2": "DaVilla",
         "opener3": "",
         "opener4": "",
-        "ticketTier1": {
-          "name": "General Admission",
-          "location": "Main Floor",
-          "price": "$25.50"
+        "tier1" : {
+          "name": "General Admission", 
+          "location": "Upper Level", 
+          "price": "25.50"
         },
-        "ticketTier2": {
-          "name": "General Admission",
-          "location": "Upper Deck",
-          "price": "$30.50"
+        "tier2" : {
+          "name": "General Admission", 
+          "location": "Main Floor", 
+          "price": "30.50"
         },
-        "ticketTier3": {
-          "name": "VIP Admission",
-          "location": "Opera Box",
-          "price": "$70.25"
-        },
-        "ticketTier4": {
-          "name": "",
-          "location": "",
-          "price": ""
-        },
-        "ticketTier5": {
-          "name": "",
-          "location": "",
-          "price": ""
-        }
+        "feePercentage" : ".175"
       },
       {
         "name": "Beyonce",
@@ -71,31 +57,6 @@ export class Items {
         "address": "624 University Ave, Madison, WI 53715",
         "phoneNumber": "(608) 257-1122",
         "emailAddress": "info@liquidmadison.com",
-        "ticketTier1": {
-          "name": "General Admission",
-          "location": "Main Floor",
-          "price": "$35.50"
-        },
-        "ticketTier2": {
-          "name": "General Admission",
-          "location": "Upper Deck",
-          "price": "$40.50"
-        },
-        "ticketTier3": {
-          "name": "VIP Admission",
-          "location": "Opera Box",
-          "price": "$80.25"
-        },
-        "ticketTier4": {
-          "name": "",
-          "location": "",
-          "price": ""
-        },
-        "ticketTier5": {
-          "name": "",
-          "location": "",
-          "price": ""
-        }
       },
       {
         "name": "Zhu",
@@ -109,31 +70,6 @@ export class Items {
         "address": "624 University Ave, Madison, WI 53715",
         "phoneNumber": "(608) 257-1122",
         "emailAddress": "info@liquidmadison.com",
-        "ticketTier1": {
-          "name": "General Admission",
-          "location": "Main Floor",
-          "price": "$35.50"
-        },
-        "ticketTier2": {
-          "name": "General Admission",
-          "location": "Upper Deck",
-          "price": "$40.50"
-        },
-        "ticketTier3": {
-          "name": "VIP Admission",
-          "location": "Opera Box",
-          "price": "$80.25"
-        },
-        "ticketTier4": {
-          "name": "",
-          "location": "",
-          "price": ""
-        },
-        "ticketTier5": {
-          "name": "",
-          "location": "",
-          "price": ""
-        }
       }
     ];
 

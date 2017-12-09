@@ -16,7 +16,6 @@ import { VenuesPage } from '../pages/venues/venues';
 import { MarketingPage } from '../pages/marketing/marketing';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { ProfilePage } from '../pages/profile/profile';
-import { ModalContentPage } from '../pages/item-review/item-review';
 
 import { Items } from '../mocks/providers/items';
 
@@ -37,8 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     VenuesPage,
     MarketingPage,
     NotificationsPage,
-    ProfilePage,
-    ModalContentPage
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -59,8 +57,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     VenuesPage,
     MarketingPage,
     NotificationsPage,
-    ProfilePage,
-    ModalContentPage
+    ProfilePage
   ],
   providers: [
     Items,

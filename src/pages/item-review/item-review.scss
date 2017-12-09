@@ -1,37 +1,70 @@
 page-item-review {
-  .whiteFont {
-    color: #fff;
+  .noMargin {
+    margin: 0px;
   }
-  .item-profile {
+  .noPadding {
+    padding: 0px;
+  }
+
+  //this is the cover photo background column
+  .coverPhotoRow {
+    border: 1px solid black;
+    height: 35%;
+  }
+  .coverPhotoRow .backgroundCol {
+    background-image: url("../assets/img/eventArt/coverPhoto/dillonCover.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    padding: 0px;
+  }
+  //end of cover photo background column
+
+
+  //beginning of action bar wrapper that contains close and share buttons
+  .actionBar {
+    color: #fff;
+    font-size: 26px;
+    height: 25%;
+    padding: 0px;
     width: 100%;
-    background-position: center center;
-    background-size: cover;
-    height: 25vh;
   }
+  //end of action bar wrapper styling
 
-  .item-detail {
-    background-color: rgb(51,51,51);
-    color: #fff;
-    line-height: 50%;
-    margin-bottom: 10%;
-    padding-left: 15px;
+
+  //beginning of share button wrapper styling
+  .shareButtonWrapper{
+    color: inherit;
+    float: right;
+    height: 100%;
+    margin: 0px;
+    padding-right: 10px;
+    text-align: right;
+    width: 50%;
+  }
+  .shareButtonWrapper ion-icon {
+    margin-top: 5%;
+  }
+  //end of share button wrapper styling
+
+
+  //beginning of event text wrapper styling
+  .eventTextWrapper {
+    height: 100%;
+    margin-left: 5px;
+    margin-top: 5%;
     width: 100%;
   }
+  //end of event text wrapper styling
 
-  .transparentBackground {
-    background-color: transparent;
-  }
 
-  .text-input::-moz-placeholder {
-    color: #fff;
+  //beginning of presenter paragraph styling
+  .presenterParagraph{
+    margin-bottom: 5px;
   }
-  
-  .text-input:-ms-input-placeholder {
-    color: #fff;
-  }
-  
-  .text-input::-webkit-input-placeholder {
-    text-indent: 0;
-    color: #fff;
+  //end of presenter paragraph styling
+
+  .active {
+    color: #02b1ef;
   }
 }

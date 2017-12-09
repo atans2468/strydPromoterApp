@@ -41,6 +41,7 @@ export class ItemDetailPage {
   //data retrieved
 
 
+  //counter
   public counter : number = 0;
   
   increment(){
@@ -50,6 +51,7 @@ export class ItemDetailPage {
   decrement(){
     this.counter -= 1;
   }
+  //end of counter
   
   
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {

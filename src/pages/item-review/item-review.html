@@ -1,73 +1,83 @@
 <ion-header>
-
+    
   <ion-navbar>
     <ion-title>Review</ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
-<ion-content style="background-color: rgb(51,51,51); color: #fff;">
-  <!--<div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>-->
-
-  <!--<div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
-    <p>{{item.venue}}</p>
-  </div>-->
-
-  <div class="item-detail">
-    <ion-thumbnail item-start style="float: left; margin-right: 10px;">
-      <img [src]="item.flierImg" style="width: 100px; height: 125px;" />
-    </ion-thumbnail>
-    <h3>{{item.name}}</h3>
-    <p>{{item.date}}</p>
-    <p>Doors at {{item.doors}}</p>
-    <p>{{item.venue}}</p>
-    <p>{{item.ages}}</p>
     
-    <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-
-  </div>
-
-  <ion-list style="color: #fff;">
     
-    <ion-item class="transparentBackground">
-      <ion-input class="whiteFont" type="text" placeholder="First Name"></ion-input>
-      <ion-input class="whiteFont" type="text" placeholder="Last Name"></ion-input>
-    </ion-item>
+<ion-content style="background-color: #d8d9da;">
 
-    <ion-item class="transparentBackground">
-      <ion-input class="whiteFont" type="date" placeholder="Date of Birth"></ion-input>
-    </ion-item>
+  <!-- beginning of cover photo -->
+  <ion-row class="coverPhotoRow"> 
+    <ion-col col-12 class="backgroundCol">
+      
+      <!-- action bar -->
+      <div class="actionBar">  
+        <div class="shareButtonWrapper">
+          <ion-icon name="share-outline"></ion-icon>
+        </div>
+      </div>
 
-    <ion-item class="transparentBackground">
-      <ion-input class="whiteFont" type="email" placeholder="Email Address"></ion-input>
-    </ion-item>
+      <!-- event text -->
+      <div class="eventTextWrapper">
+        <p class="presenterParagraph">{{item.presenter}} Presents:</p>
+        <h2 class="noMargin">{{item.name}}</h2>
+        <p class="noMargin">{{item.date}} | {{item.venue}}</p>
+      </div>
 
-    <ion-item class="transparentBackground">
-      <ion-input class="whiteFont" type="number" placeholder="Phone Number"></ion-input>
-    </ion-item>
+    </ion-col>
 
-    <ion-item class="transparentBackground">
-      <ion-label class="whiteFont">Payment Type</ion-label>
-      <ion-select [(ngModel)]="paymentType" class="whiteFont">
-        <ion-option value="venmo">Venmo</ion-option>
-        <ion-option value="creditCard" selected>Credit Card</ion-option>
-        <ion-option value="googleWallet">Google Wallet</ion-option>
-        <ion-option value="payPal">PayPal</ion-option>
-        <ion-option value="bitPay">BitPay</ion-option>
-        <ion-option value="cash">Cash</ion-option>
-      </ion-select>
-    </ion-item>
+  </ion-row>
+  <!-- end of cover photo -->
+
   
-  </ion-list>
+  <!-- tier selection(s) -->
+  <ion-row style="background-color: #fff; height: 30px; border-bottom: 1px solid #d8d9da;">
+    <ion-col col-8 style="padding: 0px;">
+      <p style="color: #aaa; position: absolute; left: 5px; margin-top: 5px;">{{item.tier2.name}} - {{item.tier2.location}}</p>
+    </ion-col>
 
-  <ion-row>
-    <ion-col col-12 style="text-align: center;">
-      <button ion-button color="secondary" round style="width: 70%;" (click)="openModal({charNum: 0})"><b>Select</b></button>
+    <ion-col col-4 style="padding: 0px;">
+      <p style="position: absolute; right: 5px; margin-top: 5px; color: #02b1ef">${{item.tier2.price}} X 1</p>
+    </ion-col>
+  </ion-row>
+  <!-- end of tier selection -->
+
+  <!-- total cost calculations -->
+  <ion-row style="background-color: #fff; height: 30px;">
+    <ion-col col-8 style="padding: 0px;">
+      <small style="color: #aaa; position: absolute; left: 5px; margin-top: 5px;">Subtotal</small>
+    </ion-col>
+
+    <ion-col col-4 style="padding: 0px;">
+      <small style="color: #aaa; position: absolute; right: 5px; margin-top: 5px;">${{item.tier2.price}}</small>
     </ion-col>
   </ion-row>
 
+  <ion-row style="background-color: #fff; height: 30px;">
+    <ion-col col-8 style="padding: 0px;">
+      <small style="color: #aaa; position: absolute; left: 5px;">Fees & Tax</small>
+    </ion-col>
+
+    <ion-col col-4 style="padding: 0px;">
+      <small style="color: #aaa; position: absolute; right: 5px;">$3.50</small>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="background-color: #fff; height: 30px;">
+    <ion-col col-8 style="padding: 0px;">
+      <p style="color: #000; position: absolute; left: 5px; margin-top: 0px;">Total</p>
+    </ion-col>
+
+    <ion-col col-4 style="padding: 0px;">
+      <p style="color: #000; position: absolute; right: 5px; margin-top: 0px;">$23.50</p>
+    </ion-col>
+  </ion-row>
+  <!-- end of total cost calculations -->
+
+  
+
 </ion-content>
+    

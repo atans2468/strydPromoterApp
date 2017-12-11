@@ -70,6 +70,19 @@ export class Items {
         "address": "624 University Ave, Madison, WI 53715",
         "phoneNumber": "(608) 257-1122",
         "emailAddress": "info@liquidmadison.com",
+      },
+      {
+        "name": "Zhu",
+        "flierImg": "assets/img/eventArt/zhuProf.jpg",
+        "coverPhoto": "assets/img/eventArt/zhuProf.jpg",
+        "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
+        "date": "12/23/17",
+        "venue": "Orpheum Theater",
+        "doors": "10:30pm",
+        "ages": "18+",
+        "address": "624 University Ave, Madison, WI 53715",
+        "phoneNumber": "(608) 257-1122",
+        "emailAddress": "info@liquidmadison.com",
       }
     ];
 

@@ -18,7 +18,7 @@ export class ItemDetailPage {
   tiers = [
     { name: "General Admission", location: "Main Floor", price: "25.50"},
     { name: "General Admission", location: "Upper Deck", price: "30.50"},
-    { name: "VIP Admission", location: "Opera Box", price: "70.25"},
+    { name: "VIP Admission", location: "Opera Box", price: "70.25"}
   ];
 
   shownGroup = 0;
@@ -34,12 +34,6 @@ export class ItemDetailPage {
       return this.shownGroup === group;
   };
   //end of accordion
-  
-
-  //retrieve data from items.ts carried over from list-master
-  item: any;
-  //data retrieved
-
 
   //counter
   public counter : number = 0;
@@ -52,6 +46,12 @@ export class ItemDetailPage {
     this.counter -= 1;
   }
   //end of counter
+  
+
+
+  //retrieve data from items.ts carried over from list-master
+  item: any;
+  //data retrieved
   
   
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {

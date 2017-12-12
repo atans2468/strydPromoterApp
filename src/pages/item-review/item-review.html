@@ -9,7 +9,7 @@
     
 <ion-content style="background-color: #d8d9da;">
 
-  <!-- beginning of cover photo -->
+  <!-- beginning of cover photo row -->
   <ion-row class="coverPhotoRow"> 
     <ion-col col-12 class="backgroundCol">
       
@@ -30,10 +30,10 @@
     </ion-col>
 
   </ion-row>
-  <!-- end of cover photo -->
+  <!-- end of cover photo row -->
 
   
-  <!-- tier selection(s) -->
+  <!-- tier(s) selected -->
   <ion-row style="background-color: #fff; height: 30px; border-bottom: 1px solid #d8d9da;">
     <ion-col col-8 style="padding: 0px;">
       <p style="color: #aaa; position: absolute; left: 5px; margin-top: 5px;">{{item.tier2.name}} - {{item.tier2.location}}</p>
@@ -43,7 +43,8 @@
       <p style="position: absolute; right: 5px; margin-top: 5px; color: #02b1ef">${{item.tier2.price}} X 1</p>
     </ion-col>
   </ion-row>
-  <!-- end of tier selection -->
+  <!-- end of tier(s) selected -->
+
 
   <!-- total cost calculations -->
   <ion-row style="background-color: #fff; height: 30px;">
@@ -77,7 +78,85 @@
   </ion-row>
   <!-- end of total cost calculations -->
 
-  
+
+  <!-- customer information row -->
+  <ion-list style="margin-top: 4px; margin-bottom: 0px;">
+    <ion-item text-wrap [ngClass]="{active: isConsumerGroupShown(a)}" style="text-align: left; padding: 0px; margin-bottom: 4px;">
+      <h3 style="color: #aaa; margin-left: 5px;" (click)="toggleConsumerGroup(a)">Consumer Information</h3>
+      <ion-icon color="success" item-right [name]="isConsumerGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="position: absolute; right: 5px; top: 0px;"></ion-icon>
+
+      <div *ngIf="isConsumerGroupShown(a)" style="color: #aaa; padding-top: 5%;">
+        <ion-list>
+            
+          <ion-item>
+            <ion-input type="text" placeholder="First Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input type="text" placeholder="Last Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="date" placeholder="Date of Birth" style="border-bottom: 1px solid #aaa;"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="email" placeholder="Email Address" style="border-bottom: 1px solid #aaa;"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="tel" placeholder="Phone Number"></ion-input>
+          </ion-item>
+        
+        </ion-list>
+      </div>
+      
+    </ion-item>
+  </ion-list>
+  <!-- end of customer information row -->
+
+
+  <!-- payment information row -->
+  <ion-list style="margin-top: 4px;">
+    <ion-item text-wrap [ngClass]="{active: isPaymentGroupShown(i)}" style="text-align: left; padding: 0px; margin-bottom: 4px;">
+      <h3 (click)="togglePaymentGroup(i)" style="color: #aaa; margin-left: 5px;">Payment Information</h3>
+      <ion-icon color="success" item-right [name]="isPaymentGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="position: absolute; right: 5px; top: 0px;"></ion-icon>
+      
+      <div *ngIf="isPaymentGroupShown(a)" style="color: #aaa; padding-top: 5%;">
+        <ion-list>
+            
+          <ion-item>
+            <ion-label>Payment Method</ion-label>
+            <ion-select [(ngModel)]="paymentMethod">
+              <ion-option value="creditCard">Credit Card</ion-option>
+              <ion-option value="payPal">PayPal</ion-option>
+              <ion-option value="venmo">Venmo</ion-option>
+              <ion-option value="bitcoin">Bitcoin</ion-option>
+              <ion-option value="cash">Cash</ion-option>
+            </ion-select>
+          </ion-item>
+        
+        </ion-list>
+      </div>
+      
+    </ion-item>
+  </ion-list>
+  <!-- end of payment information row -->
 
 </ion-content>
-    
+<!-- end of main body content -->
+
+
+<!-- footer containing 'PURCHASE' button -->
+<ion-footer style="background-color: #02b1ef; height: 40px;">
+  <ion-grid style="height: 100%;">
+    <ion-row style="height: 100%;">
+      <ion-col col-12 style="height: 100%;">
+        <button ion-button full clear (click)="finishSale()" style="margin: 0px; padding-left: 5px; height: 100%; color: #fff;">
+          CONFIRM PURCHASE
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+<!-- end of footer containing 'PURCHASE' button -->

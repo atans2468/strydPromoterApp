@@ -23,6 +23,33 @@ export class ItemDetailPage {
   }
   
 
+  //action sheet function
+  presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Share this event',
+      buttons: [
+        {
+          text: 'Share',
+          handler: () => {
+            console.log('Share clicked');
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+  
+    actionSheet.present();
+  }
+  //end of action sheet function
+
+
+  
   //accordion
   tiers = [
     { name: "General Admission", location: "Main Floor", price: "25.50"},
@@ -43,6 +70,7 @@ export class ItemDetailPage {
       return this.shownGroup === group;
   };
   //end of accordion
+
 
 
   //counter
@@ -67,23 +95,4 @@ export class ItemDetailPage {
       item: item
     });
   }
-
-
-  //action sheet function
-  presentActionSheet() {
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Share this event',
-      buttons: [
-        {
-          text: 'Share',
-          handler: () => {
-            console.log('Share clicked');
-          }
-        }
-      ]
-    });
- 
-    actionSheet.present();
-  }
-
 }

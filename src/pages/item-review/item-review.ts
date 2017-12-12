@@ -35,6 +35,13 @@ export class ItemReviewPage {
           handler: () => {
             console.log('Share clicked');
           }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
         }
       ]
     });

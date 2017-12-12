@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
 
 import { ItemReviewPage } from '../item-review/item-review';
 
@@ -12,6 +12,15 @@ import { Item } from '../../models/item';
   templateUrl: 'item-detail.html'
 })
 export class ItemDetailPage {
+
+  //retrieve data from items.ts carried over from list-master
+  item: any;
+  //data retrieved
+
+  
+  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public actionSheetCtrl: ActionSheetController) {
+    this.item = navParams.get('item') || items.defaultItem;
+  }
   
 
   //accordion
@@ -35,6 +44,7 @@ export class ItemDetailPage {
   };
   //end of accordion
 
+
   //counter
   public counter : number = 0;
   
@@ -46,17 +56,7 @@ export class ItemDetailPage {
     this.counter -= 1;
   }
   //end of counter
-  
 
-
-  //retrieve data from items.ts carried over from list-master
-  item: any;
-  //data retrieved
-  
-  
-  constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {
-    this.item = navParams.get('item') || items.defaultItem;
-  }
 
 
   /**
@@ -66,6 +66,24 @@ export class ItemDetailPage {
     this.navCtrl.push(ItemReviewPage, {
       item: item
     });
+  }
+
+
+  //action sheet function
+  presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Share this event',
+      buttons: [
+        {
+          text: 'Share',
+          handler: () => {
+            console.log('Share clicked');
+          }
+        }
+      ]
+    });
+ 
+    actionSheet.present();
   }
 
 }

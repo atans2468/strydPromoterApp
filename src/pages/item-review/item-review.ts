@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Platform, ViewController, NavController, NavParams } from 'ionic-angular';
+import {Platform, ViewController, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 
@@ -15,6 +15,34 @@ import { TabsPage } from '../tabs/tabs';
 })
 
 export class ItemReviewPage {
+  
+  //retrieve data from items.ts carried over from list-master
+  item: any;
+  //data retrieved
+
+  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public actionSheetCtrl: ActionSheetController) {
+    this.item = navParams.get('item') || items.defaultItem;
+  }
+
+
+  //action sheet function
+  presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Share this event',
+      buttons: [
+        {
+          text: 'Share',
+          handler: () => {
+            console.log('Share clicked');
+          }
+        }
+      ]
+    });
+ 
+    actionSheet.present();
+  }
+  //end of action sheet function
+
 
   //accordion
   tiers = [
@@ -48,14 +76,6 @@ export class ItemReviewPage {
   };
   //end of accordion
 
-  
-  //retrieve data from items.ts carried over from list-master
-  item: any;
-  //data retrieved
-
-  constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {
-    this.item = navParams.get('item') || items.defaultItem;
-  }
 
 
    /**

@@ -1,0 +1,28 @@
+page-venueDetails {
+    .noMargin {
+        margin: 0px;
+    }
+    .noPadding {
+        padding: 0px;
+    }
+
+
+    ion-card {
+        box-shadow: -6px 8px 10px -4px #999;
+    }
+
+
+    .swiper-pagination-bullet {
+        background-color: #fff;
+        opacity: 0.9;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #02b1ef;
+        opacity: 1;
+    }
+
+
+    .sellTicketsButton .button-inner{
+        justify-content:flex-start;
+    }
+}

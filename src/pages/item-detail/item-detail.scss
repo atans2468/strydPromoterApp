@@ -6,22 +6,27 @@ page-item-detail {
     padding: 0px;
   }
 
-  //this is the cover photo background column
+  //this is the cover photo background row, column and image
   .coverPhotoRow {
     border: 1px solid black;
     height: 35%;
   }
   .coverPhotoRow .backgroundCol {
-    background-image: url("../assets/img/eventArt/coverPhoto/dillonCover.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     color: #fff;
     padding: 0px;
   }
-  //end of cover photo background column
+  .coverPhotoRow .backgroundCol .coverPhoto {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+  }
+  //end of cover photo background row, column, and image
 
 
-  //beginning of action bar wrapper that contains close and share buttons
+  //beginning of action bar wrapper that contains the share button
   .actionBar {
     color: #fff;
     font-size: 26px;

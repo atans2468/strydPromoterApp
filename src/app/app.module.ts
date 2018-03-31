@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Pro } from '@ionic/pro';
+import { Push } from '@ionic-native/push';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -108,6 +109,7 @@ export class MyErrorHandler implements ErrorHandler {
     Venues,
     StatusBar,
     SplashScreen,
+    Push,
     IonicErrorHandler,
     [{ provide: ErrorHandler, useClass: MyErrorHandler }]
   ]

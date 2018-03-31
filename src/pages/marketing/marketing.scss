@@ -1,3 +1,42 @@
 page-marketing {
+    .noMargin {
+        margin: 0px;
+    }
+    .noPadding {
+        padding: 0px;
+    }
+    .fullHeight {
+        height: 100%;
+    }
+    .fullWidth {
+        width: 100%;
+    }
+    .blueFont{
+        color: #02b1ef;
+    }
+    .greenFont {
+        color: #29ca90;
+    }
+    .blueBackground{
+        background-color: #02b1ef;
+    }
+    .centerAlign{
+        text-align: center !important;
+        margin: 0px auto;
+    }
+    .yourEvents {
+        background-color: #fff; 
+        height: 30px; 
+        margin-top: 6px; 
+        margin-bottom: 0px;
+        position: fixed;
+    }
+    
+    .sellTicketsButton .button-inner{
+        justify-content:flex-start;
+    }
 
+    ion-card {
+        box-shadow: -6px 8px 10px -4px #999;
+    }
 }

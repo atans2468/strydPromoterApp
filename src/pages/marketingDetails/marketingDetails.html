@@ -1,0 +1,184 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Marketing
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="noMargin noPadding topMargin" style="background-color: #fff;">
+  <!-- beginning of cover photo -->
+  <ion-row class="coverPhotoRow"> 
+    <ion-col col-12 class="backgroundCol">
+        <img [src]="item.coverPhoto" class="coverPhoto" />
+      
+      <!-- action bar -->
+      <div class="actionBar">  
+        <div class="shareButtonWrapper">
+          <!--<ion-icon name="share-outline" (click)="presentActionSheet()"></ion-icon>-->
+        </div>
+      </div>
+
+      <!-- event text -->
+      <div class="eventTextWrapper">
+        <h2 class="noMargin">{{item.name}}</h2>
+        <p class="noMargin">{{item.date}} | {{item.venue}}</p>
+      </div>
+
+    </ion-col>
+
+  </ion-row>
+  <!-- end of cover photo -->
+
+  <ion-row>
+    <ion-col></ion-col>
+  </ion-row>
+  
+  <ion-card>
+    <ion-card-header>
+      Social Media
+    </ion-card-header>
+  
+    <ion-list>
+      
+      <button ion-item (click)="postPage(item)">
+        <ion-icon name="logo-facebook" class="facebookIcon" item-start></ion-icon>
+        Facebook
+      </button>
+  
+      <button ion-item (click)="postPage(item)">
+        <ion-icon name="logo-instagram" class="instagramIcon" item-start></ion-icon>
+        Instagram
+      </button>
+  
+      <button ion-item (click)="postPage(item)">
+        <ion-icon name="logo-twitter" class="twitterIcon" item-start></ion-icon>
+        Twitter
+      </button>
+  
+    </ion-list>
+
+    <ion-row>
+      <ion-col class="noPadding">
+        <button ion-button full class="noMargin" style="background-color: #29ca90;">Add To Your Campaigns</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!-- beginning of interaction route card -->
+  <ion-card>
+    <ion-card-header class="noMargin" style="padding: 5px;" (click)="presentToast()">
+        Interaction Route
+    </ion-card-header>
+    
+    <img src="../../assets/img/advance-card-map-madison.png">
+    <!--<ion-fab right top>
+      <button ion-fab>
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-fab>-->
+  
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+
+      <ion-col>
+        
+      </ion-col>
+    </ion-row>
+  
+    <ion-item>
+      <span item-left>30 min</span>
+      <button ion-button icon-left clear item-end style="color: #29ca90; font-size: 16px;" (click)="acceptRoute()">
+        <ion-icon name="checkmark" style="color: #29ca90; font-size: 30px;"></ion-icon>
+        Accept Route
+      </button>
+    </ion-item>
+  
+  </ion-card>
+  <!-- end of interaction route card -->
+
+
+
+  <!-- beginning of poster route card -->
+  <ion-card>
+      <ion-card-header class="noMargin" style="padding: 5px;" (click)="presentToast()">
+          Poster Route
+      </ion-card-header>
+      
+      <img src="../../assets/img/advance-card-map-madison.png">
+      <!--<ion-fab right top>
+        <button ion-fab>
+          <ion-icon name="pin"></ion-icon>
+        </button>
+      </ion-fab>-->
+    
+      <ion-row>
+        <ion-col>
+  
+        </ion-col>
+  
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+    
+      <ion-item>
+        <span item-left>18/20 Posters</span>
+        <button ion-button icon-left clear item-end style="color: #29ca90; font-size: 16px;" (click)="acceptRoute()">
+          <ion-icon name="checkmark" style="color: #29ca90; font-size: 30px;"></ion-icon>
+          Accept Route
+        </button>
+      </ion-item>
+    
+    </ion-card>
+    <!-- end of poster route card -->
+
+    <!-- beginning of ticket contest card -->
+    <ion-card>
+        
+      <ion-card-header>
+        Ticket Contest
+      </ion-card-header>
+    
+      <ion-list>
+
+        <ion-item>
+          <h2><b>Top promoter receives $100</b></h2>
+        </ion-item>
+
+      </ion-list>
+
+      <ion-row>
+        <ion-col class="noPadding">
+          <button ion-button full class="noMargin" style="background-color: #29ca90;">View Minimum Requirements</button>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+    <!-- end of ticket contest card -->
+
+</ion-content>
+
+<ion-footer class="noMargin noPadding" style="background-color: #fff; height: 40px; border-top: 1px solid #aaa;">
+  <ion-grid class="noMargin noPadding fullHeight">
+    <ion-row class="noMargin noPadding fullHeight">
+      
+      <ion-col col-6 class="noMargin noPadding fullHeight" style="border-right: 1px solid #aaa;">
+          <button ion-button clear icon-left class="greenFont centerAlign fullHeight fullWidth" (click)="openItem(item)" style="font-size: 14px;">
+            <ion-icon name="list"></ion-icon>
+            Your Campaigns
+          </button>
+      </ion-col>
+
+      <ion-col col-6 class="noMargin noPadding fullHeight">
+          <button ion-button clear icon-left class="blueFont centerAlign fullHeight fullWidth" (click)="openItem(item)" style="height: 100%; font-size: 14px;">
+            <ion-icon name="megaphone"></ion-icon>
+            Marketing
+          </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-footer>

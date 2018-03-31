@@ -1,0 +1,32 @@
+page-socialPost {
+  
+  .noMargin {
+      margin: 0px !important;
+    }
+  .noPadding {
+    padding: 0px !important;
+  }
+  .fullHeight {
+      height: 100%;
+  }
+  .fullWidth {
+      width: 100%;
+  }
+  .blueFont{
+      color: #02b1ef;
+  }
+  .greenFont {
+      color: #29ca90;
+  }
+  .blueBackground{
+      background-color: #02b1ef;
+  }
+  .centerAlign{
+      text-align: center !important;
+      margin: 0px auto;
+  }
+  .devBorder {
+      border: 1px solid black;
+  }
+  
+}

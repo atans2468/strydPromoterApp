@@ -5,6 +5,25 @@ page-venueDetails {
     .noPadding {
         padding: 0px;
     }
+    .fullHeight {
+        height: 100%;
+    }
+    .fullWidth {
+        width: 100%;
+    }
+    .blueFont{
+        color: #02b1ef;
+    }
+    .greenFont {
+        color: #29ca90;
+    }
+    .blueBackground{
+        background-color: #02b1ef;
+    }
+    .centerAlign{
+        text-align: center !important;
+        margin: 0px auto;
+    }
 
 
     ion-card {
@@ -20,8 +39,7 @@ page-venueDetails {
         background-color: #02b1ef;
         opacity: 1;
     }
-
-
+    
     .sellTicketsButton .button-inner{
         justify-content:flex-start;
     }

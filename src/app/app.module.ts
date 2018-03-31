@@ -16,11 +16,13 @@ import { ItemReviewPage } from '../pages/item-review/item-review';
 import { VenuesPage } from '../pages/venues/venues';
 import { VenueDetailsPage } from '../pages/venueDetails/venueDetails';
 import { MarketingPage } from '../pages/marketing/marketing';
+import { MarketingDetailsPage } from '../pages/marketingDetails/marketingDetails';
+import { socialPostPage } from '../pages/socialPost/socialPost';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { ProfilePage } from '../pages/profile/profile';
 
 import { Items } from '../mocks/providers/items';
-import { Venues } from '../mocks/providers/venuesData';
+import { Venues } from '../mocks/providers/venues';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,6 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     VenuesPage,
     VenueDetailsPage,
     MarketingPage,
+    MarketingDetailsPage,
+    socialPostPage,
     NotificationsPage,
     ProfilePage
   ],
@@ -46,7 +50,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      //Tabs config
+      tabsHideOnSubPages: true,
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,6 +69,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     VenuesPage,
     VenueDetailsPage,
     MarketingPage,
+    MarketingDetailsPage,
+    socialPostPage,
     NotificationsPage,
     ProfilePage
   ],

@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 import { Api } from './api';
 
 import { Item } from '../models/item';
+import { Venue } from '../models/venue';
 
 @Injectable()
 export class Items {
@@ -24,3 +25,21 @@ export class Items {
   }
 
 }
+
+export class Venues {
+  
+    constructor(public http: Http, public api: Api) {
+    }
+  
+    query(params?: any) {
+      return this.api.get('/venues', params)
+        .map(resp => resp.json());
+    }
+  
+    add(venue: Venue) {
+    }
+  
+    delete(venue: Venue) {
+    }
+  
+  }

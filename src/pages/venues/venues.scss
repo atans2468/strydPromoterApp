@@ -25,4 +25,33 @@ page-venues {
     .sellTicketsButton .button-inner{
         justify-content:flex-start;
     }
+
+    .card-background-page {
+        
+        ion-card {
+        position: relative;
+        text-align: center;
+        }
+    
+        .card-title {
+        position: absolute;
+        top: 0%;
+        padding-top: 20%;
+        height: 100%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        background-color: rgba(125, 122, 122, 0.3)
+        }
+    
+        .card-subtitle {
+        font-size: 1.1em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+        }
+    
+    }
 }

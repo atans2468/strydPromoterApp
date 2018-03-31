@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Post
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doSomething($event)">
+        Info
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="noMargin noPadding topMargin" style="background-color: #fff;">
+  <ion-slides pager>
+    
+    <!-- facebook post slide -->
+    <ion-slide>
+      <ion-grid class="fullHeight" style="position: absolute; top: 0px;">
+        
+        <ion-row style="height: 25%;">
+          <ion-col col-12>
+            <textarea placeholder="Say something..." style="resize: none; height: 70%; width: 100%; border: none; padding: 0px;"></textarea>
+
+            <hr class="noPadding" style="width: 50%; height: 2px; color: #aaa; margin-bottom: 0px;">
+            <button class="noMargin noPadding" ion-button clear (click)="post()">Post</button>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row style="height: 70%;">
+          <ion-col col-12 class="centerText">
+            <small style="font-size: 10px; color: #aaa; position: absolute; bottom: 100px; left: 0%; right: 0%; margin-left: auto; margin-right: auto;">Link to purchase tickets is being automatically attached to this post</small>
+            <img src="../../assets/img/FB-f-Logo__blue_100.png" style="width: 60px; height: 60px; position: absolute; bottom: 25px; left: 0%; right: 0%; margin-left: auto; margin-right: auto;" />
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-slide>
+  
+    <!-- instagram post slide -->
+    <ion-slide>
+      <ion-grid class="fullHeight" style="position: absolute; top: 0px;">
+        
+        <ion-row style="height: 25%;">
+          <ion-col col-12>
+            <textarea placeholder="Say something..." style="resize: none; height: 70%; width: 100%; border: none; padding: 0px;"></textarea>
+
+            <hr class="noPadding" style="width: 50%; height: 2px; color: #aaa; margin-bottom: 0px;">
+            <button class="noMargin noPadding" ion-button clear>Post</button>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row style="height: 70%;">
+          <ion-col col-12 class="centerText">
+            <small style="font-size: 10px; color: #aaa; position: absolute; bottom: 100px; left: 0%; right: 0%; margin-left: auto; margin-right: auto;">Link to purchase tickets is being automatically attached to this post</small>
+            <img src="../../assets/img/FB-f-Logo__blue_100.png" style="width: 60px; height: 60px; position: absolute; bottom: 25px; left: 0%; right: 0%; margin-left: auto; margin-right: auto;" />
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-slide>
+  
+    <!-- twitter post slide -->
+    <ion-slide>
+      <ion-grid class="fullHeight" style="position: absolute; top: 0px;">
+        
+        <ion-row style="height: 25%;">
+          <ion-col col-12>
+            <textarea placeholder="Say something..." style="resize: none; height: 70%; width: 100%; border: none; padding: 0px;"></textarea>
+
+            <hr class="noPadding" style="width: 50%; height: 2px; color: #aaa; margin-bottom: 0px;">
+            <button class="noMargin noPadding" ion-button clear>Post</button>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row style="height: 70%;">
+          <ion-col col-12 class="centerText">
+            <small style="font-size: 10px; color: #aaa; position: absolute; bottom: 100px; left: 0%; right: 0%; margin-left: auto; margin-right: auto;">Link to purchase tickets is being automatically attached to this post</small>
+            <img src="../../assets/img/FB-f-Logo__blue_100.png" style="width: 60px; height: 60px; position: absolute; bottom: 25px; left: 0%; right: 0%; margin-left: auto; margin-right: auto;" />
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-slide>
+  
+  </ion-slides>
+</ion-content>

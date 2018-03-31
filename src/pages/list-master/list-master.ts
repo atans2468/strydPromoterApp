@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
+import { Push, PushObject, PushOptions } from '@ionic-native/push';
 
 import { ItemDetailPage } from '../item-detail/item-detail';
 
@@ -14,7 +15,7 @@ import { Item } from '../../models/item';
 export class ListMasterPage {
   currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, private push: Push) {
     this.currentItems = this.items.query();
   }
 
@@ -24,23 +25,6 @@ export class ListMasterPage {
   ionViewDidLoad() {
   }
 
-  /**
-   * Prompt the user to add a new item. This shows our ItemCreatePage in a
-   * modal and then adds the new item to our data source if the user created one.
-  
-  addItem() {
-    let addModal = this.modalCtrl.create(ItemCreatePage);
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
-  }*/
-
-  /**
-   * Delete an item from the list of items.
-   */
   deleteItem(item) {
     this.items.delete(item);
   }

@@ -4,7 +4,7 @@ import { VenueDetailsPage } from '../venueDetails/venueDetails';
 
 import { Venues } from '../../providers/providers';
 
-import { Venue } from '../../models/venues';
+import { Venue } from '../../models/venue';
 
 @Component({
   selector: 'page-venues',
@@ -20,9 +20,9 @@ export class VenuesPage {
   
   //Navigate to the detail page for this item.
    
-  openItem(item) {
+  openItem(venue: Venue) {
     this.navCtrl.push(VenueDetailsPage, {
-      item: item
+      venue: venue
     });
   }
 

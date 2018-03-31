@@ -1,0 +1,100 @@
+page-marketingDetails {
+  .noMargin {
+      margin: 0px !important;
+    }
+  .noPadding {
+    padding: 0px !important;
+  }
+  .fullHeight {
+      height: 100%;
+  }
+  .fullWidth {
+      width: 100%;
+  }
+  .blueFont{
+      color: #02b1ef;
+  }
+  .greenFont {
+      color: #29ca90;
+  }
+  .blueBackground{
+      background-color: #02b1ef;
+  }
+  .centerAlign{
+      text-align: center !important;
+      margin: 0px auto;
+  }
+  
+  //this is the cover photo background row, column and image
+  .coverPhotoRow {
+    border: 1px solid black;
+    height: 35%;
+  }
+  .coverPhotoRow .backgroundCol {
+    color: #fff;
+    padding: 0px;
+  }
+  .coverPhotoRow .backgroundCol .coverPhoto {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+  }
+  //end of cover photo background row, column, and image
+
+
+  //beginning of action bar wrapper that contains the share button
+  .actionBar {
+    color: #fff;
+    font-size: 26px;
+    height: 25%;
+    padding: 0px;
+    width: 100%;
+  }
+  //end of action bar wrapper styling
+
+
+  //beginning of share button wrapper styling
+  .shareButtonWrapper{
+    color: inherit;
+    float: right;
+    height: 100%;
+    margin: 0px;
+    padding-right: 10px;
+    text-align: right;
+    width: 50%;
+  }
+  .shareButtonWrapper ion-icon {
+    margin-top: 5%;
+  }
+  //end of share button wrapper styling
+
+  //beginning of event text wrapper styling
+  .eventTextWrapper {
+    height: 100%;
+    margin-left: 10px;
+    margin-top: 23%;
+    width: 100%;
+  }
+  //end of event text wrapper styling
+
+  //beginning of presenter paragraph styling
+  .presenterParagraph{
+    margin-bottom: 5px;
+  }
+  //end of presenter paragraph styling
+
+  //icon colors
+  .facebookIcon {
+    color: #3b5998;
+  }
+  .instagramIcon {
+    color: #fb3958;
+  }
+  .twitterIcon {
+    color: #0084b4;
+  }
+  //end of icon colors
+}

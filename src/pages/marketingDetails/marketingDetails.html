@@ -46,7 +46,7 @@
         Facebook
       </button>
   
-      <button ion-item (click)="postPage(item)">
+      <button ion-item (click)="presentSocialToast()">
         <ion-icon name="logo-instagram" class="instagramIcon" item-start></ion-icon>
         Instagram
       </button>
@@ -67,7 +67,7 @@
 
   <!-- beginning of interaction route card -->
   <ion-card>
-    <ion-card-header class="noMargin" style="padding: 5px;" (click)="presentToast()">
+    <ion-card-header class="noMargin" style="padding: 5px;" (click)="presentRouteToast()">
         Interaction Route
     </ion-card-header>
     
@@ -103,7 +103,7 @@
 
   <!-- beginning of poster route card -->
   <ion-card>
-      <ion-card-header class="noMargin" style="padding: 5px;" (click)="presentToast()">
+      <ion-card-header class="noMargin" style="padding: 5px;" (click)="presentRouteToast()">
           Poster Route
       </ion-card-header>
       

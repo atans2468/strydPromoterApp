@@ -26,13 +26,22 @@ export class MarketingDetailsPage {
     });
   };
 
-  presentToast() {
+  presentRouteToast() {
     let toast = this.toastCtrl.create({
       message: 'Route successfully accepted',
       duration: 3000,
       position: 'top'
     });
     toast.present();
+  };
+
+  presentSocialToast() {
+    let socialToast = this.toastCtrl.create({
+      message: 'Post successfully completed',
+      duration: 3000,
+      position: 'top'
+    });
+    socialToast.present();
   };
 
   acceptRoute() {

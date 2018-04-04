@@ -7,7 +7,7 @@
 </ion-header>
     
     
-<ion-content style="background-color: #d8d9da;">
+<ion-content class="noMargin noPadding" style="background-color: #d8d9da;">
 
   <!-- beginning of cover photo row -->
   <ion-row class="coverPhotoRow"> 
@@ -73,75 +73,89 @@
     </ion-col>
 
     <ion-col col-4 style="padding: 0px;">
-      <p style="color: #000; position: absolute; right: 5px; margin-top: 0px;">$23.50</p>
+      <p style="color: #000; position: absolute; right: 5px; margin-top: 0px;">$34.00</p>
     </ion-col>
   </ion-row>
   <!-- end of total cost calculations -->
 
 
+
   <!-- customer information row -->
-  <ion-list style="margin-top: 4px; margin-bottom: 0px;">
-    <ion-item text-wrap [ngClass]="{active: isConsumerGroupShown(a)}" style="text-align: left; padding: 0px; margin-bottom: 4px;">
-      <h3 style="color: #aaa; margin-left: 5px;" (click)="toggleConsumerGroup(a)">Consumer Information</h3>
-      <ion-icon color="success" item-right [name]="isConsumerGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="position: absolute; right: 5px; top: 0px;"></ion-icon>
+  <ion-card style="width: 98%; margin: 4px auto;">
+    <ion-card-header>
+      Consumer Information
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
 
-      <div *ngIf="isConsumerGroupShown(a)" style="color: #aaa; padding-top: 5%;">
-        <ion-list>
-            
-          <ion-item>
-            <ion-input type="text" placeholder="First Name" style="border-bottom: 1px solid #aaa;"></ion-input>
-          </ion-item>
-        
-          <ion-item>
-            <ion-input type="text" placeholder="Last Name" style="border-bottom: 1px solid #aaa;"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-input type="date" placeholder="Date of Birth" style="border-bottom: 1px solid #aaa;"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-input type="email" placeholder="Email Address" style="border-bottom: 1px solid #aaa;"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-input type="tel" placeholder="Phone Number"></ion-input>
-          </ion-item>
-        
-        </ion-list>
-      </div>
+        <ion-item>
+          <ion-input type="text" placeholder="First Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
       
-    </ion-item>
-  </ion-list>
+        <ion-item>
+          <ion-input type="text" placeholder="Last Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label style="color: #aaa;">Date of Birth</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="email" placeholder="Email Address" style="border-bottom: 1px solid #aaa; border-top: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="tel" placeholder="Phone Number"></ion-input>
+        </ion-item>
+      
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
   <!-- end of customer information row -->
 
 
+
   <!-- payment information row -->
-  <ion-list style="margin-top: 4px;">
-    <ion-item text-wrap [ngClass]="{active: isPaymentGroupShown(i)}" style="text-align: left; padding: 0px; margin-bottom: 4px;">
-      <h3 (click)="togglePaymentGroup(i)" style="color: #aaa; margin-left: 5px;">Payment Information</h3>
-      <ion-icon color="success" item-right [name]="isPaymentGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="position: absolute; right: 5px; top: 0px;"></ion-icon>
-      
-      <div *ngIf="isPaymentGroupShown(a)" style="color: #aaa; padding-top: 5%;">
-        <ion-list>
-            
-          <ion-item>
-            <ion-label>Payment Method</ion-label>
-            <ion-select [(ngModel)]="paymentMethod">
-              <ion-option value="creditCard">Credit Card</ion-option>
-              <ion-option value="payPal">PayPal</ion-option>
-              <ion-option value="venmo">Venmo</ion-option>
-              <ion-option value="bitcoin">Bitcoin</ion-option>
-              <ion-option value="cash">Cash</ion-option>
-            </ion-select>
-          </ion-item>
+  <ion-card style="width: 98%; margin: 4px auto;">
+    <ion-card-header>
+      Payment Method
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
         
-        </ion-list>
-      </div>
+        <ion-item style="border-bottom: 1px solid #aaa;">
+          <ion-label>Method</ion-label>
+          <ion-select [(ngModel)]="paymentMethod">
+            <ion-option value="creditCard">Credit Card</ion-option>
+            <ion-option value="payPal">PayPal</ion-option>
+            <ion-option value="venmo">Venmo</ion-option>
+            <ion-option value="cash">Cash</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" placeholder="Cardholder Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" placeholder="Card Number" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label style="color: #aaa;">Expiration</ion-label>
+          <ion-datetime displayFormat="MM YYYY" [(ngModel)]="card.expiration"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" placeholder="Security Code" style="border-bottom: 1px solid #aaa; border-top: 1px solid #aaa;"></ion-input>
+        </ion-item>
       
-    </ion-item>
-  </ion-list>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
   <!-- end of payment information row -->
+  
 
 </ion-content>
 <!-- end of main body content -->
@@ -160,3 +174,68 @@
   </ion-grid>
 </ion-footer>
 <!-- end of footer containing 'PURCHASE' button -->
+
+
+<!-- customer information row --
+<ion-list style="margin-top: 4px; margin-bottom: 0px;">
+  <ion-item text-wrap [ngClass]="{active: isConsumerGroupShown(a)}" style="text-align: left; padding: 0px; margin-bottom: 4px;">
+    <h3 style="color: #aaa; margin-left: 5px;" (click)="toggleConsumerGroup(a)">Consumer Information</h3>
+    <ion-icon color="success" item-right [name]="isConsumerGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="position: absolute; right: 5px; top: 0px;"></ion-icon>
+
+    <div *ngIf="isConsumerGroupShown(a)" style="color: #aaa; padding-top: 5%;">
+      <ion-list>
+          
+        <ion-item>
+          <ion-input type="text" placeholder="First Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="text" placeholder="Last Name" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="date" placeholder="Date of Birth" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="email" placeholder="Email Address" style="border-bottom: 1px solid #aaa;"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="tel" placeholder="Phone Number"></ion-input>
+        </ion-item>
+      
+      </ion-list>
+    </div>
+    
+  </ion-item>
+</ion-list>
+<!-- end of customer information row --
+
+
+<!-- payment information row --
+<ion-list style="margin-top: 4px;">
+  <ion-item text-wrap [ngClass]="{active: isPaymentGroupShown(i)}" style="text-align: left; padding: 0px; margin-bottom: 4px;">
+    <h3 (click)="togglePaymentGroup(i)" style="color: #aaa; margin-left: 5px;">Payment Information</h3>
+    <ion-icon color="success" item-right [name]="isPaymentGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="position: absolute; right: 5px; top: 0px;"></ion-icon>
+    
+    <div *ngIf="isPaymentGroupShown(a)" style="color: #aaa; padding-top: 5%;">
+      <ion-list>
+          
+        <ion-item>
+          <ion-label>Payment Method</ion-label>
+          <ion-select [(ngModel)]="paymentMethod">
+            <ion-option value="creditCard">Credit Card</ion-option>
+            <ion-option value="payPal">PayPal</ion-option>
+            <ion-option value="venmo">Venmo</ion-option>
+            <ion-option value="bitcoin">Bitcoin</ion-option>
+            <ion-option value="cash">Cash</ion-option>
+          </ion-select>
+        </ion-item>
+      
+      </ion-list>
+    </div>
+    
+  </ion-item>
+</ion-list>
+<!-- end of payment information row -->

@@ -51,38 +51,14 @@ export class ItemReviewPage {
   //end of action sheet function
 
 
-  //accordion
-  tiers = [
-    { name: "Consumer Information"},
-    { name: "Payment Information"}
-  ];
-
-  shownConsumerGroup = null;
-  shownPaymentGroup = null;
-
-  toggleConsumerGroup(group) {
-    if (this.isConsumerGroupShown(group)) {
-        this.shownConsumerGroup = null;
-    } else {
-        this.shownConsumerGroup = group;
-    }
-  };
-  isConsumerGroupShown(group) {
-      return this.shownConsumerGroup === group;
-  };
-
-  togglePaymentGroup(group) {
-    if (this.isPaymentGroupShown(group)) {
-        this.shownPaymentGroup = null;
-    } else {
-        this.shownPaymentGroup = group;
-    }
-  };
-  isPaymentGroupShown(group) {
-      return this.shownPaymentGroup === group;
-  };
-  //end of accordion
-
+  //date picker for DoB
+  public event = {
+    month: ''
+  }
+  //date picker for card expiration
+  public card = {
+    expiration: ''
+  }
 
 
    /**

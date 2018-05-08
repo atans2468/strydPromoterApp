@@ -17,9 +17,9 @@ export class Items {
   constructor(public http: Http) {
     let items = [
       {
-        "name": "Dillon Francis",
-        "flierImg": "assets/img/eventArt/dillonFrancis.jpg",
-        "coverPhoto": "assets/img/eventArt/coverPhoto/dillonCover.jpg",
+        "name": "Diplo",
+        "flierImg": "assets/img/eventArt/diploProfile.jpg",
+        "coverPhoto": "assets/img/eventArt/coverPhoto/diploCover.jpg",
         "about": "Liquid night club is one of the most popular clubs in Madison, WI.",
         "date": "12/15/17",
         "venue": "Liquid",

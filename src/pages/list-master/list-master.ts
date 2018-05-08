@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, AlertController, ToastController } from 'ionic-angular';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 
 import { ItemDetailPage } from '../item-detail/item-detail';
@@ -15,7 +15,7 @@ import { Item } from '../../models/item';
 export class ListMasterPage {
   currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, private push: Push) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, private push: Push, public alertCtrl: AlertController, public toastCtrl: ToastController) {
     this.currentItems = this.items.query();
   }
 
@@ -37,4 +37,14 @@ export class ListMasterPage {
       item: item
     });
   }
+
+
+  presentPaymentToast() {
+    let paymentToast = this.toastCtrl.create({
+      message: 'Transaction successfully completed',
+      duration: 3000,
+      position: 'top'
+    });
+    paymentToast.present();
+  };
 }

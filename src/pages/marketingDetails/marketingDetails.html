@@ -46,7 +46,7 @@
         Facebook
       </button>
   
-      <button ion-item (click)="presentSocialToast()">
+      <button ion-item (click)="postPage(item)">
         <ion-icon name="logo-instagram" class="instagramIcon" item-start></ion-icon>
         Instagram
       </button>
@@ -60,7 +60,7 @@
 
     <ion-row>
       <ion-col class="noPadding">
-        <button ion-button full class="noMargin" style="background-color: #29ca90;">Add To Your Campaigns</button>
+        <button ion-button full class="noMargin" style="background-color: #29ca90;" (click)="presentSocialToast()">Add To Your Campaigns</button>
       </ion-col>
     </ion-row>
   </ion-card>

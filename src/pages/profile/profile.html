@@ -7,5 +7,35 @@
 </ion-header>
 
 <ion-content>
+  <!-- beginning of cover photo -->
+  <ion-row class="coverPhotoRow"> 
+    <ion-col col-12 class="backgroundCol">
+        <!--<img [src]="item.coverPhoto" class="coverPhoto" />-->
+        <img src="../../assets/img/eventArt/coverPhoto/diploCover.jpg" class="coverPhoto" />
+      
+      <!-- action bar -->
+      <div class="actionBar">  
+        <div class="shareButtonWrapper">
+          <ion-icon name="share-outline" (click)="presentActionSheet()"></ion-icon>
+        </div>
+      </div>
 
+      <!-- event text -->
+      <div class="eventTextWrapper">
+        <p class="presenterParagraph">Live Nation Presents:</p>
+        <h2 class="noMargin">Diplo</h2>
+        <p class="noMargin">Antics, DaVilla</p>
+      </div>
+
+    </ion-col>
+
+  </ion-row>
+  <!-- end of cover photo -->
+
+
+  <ion-row style="height: 70%; text-align: center;">
+    <ion-col col-12 style="height: 100%;">
+      <img src="../../assets/img/eventQR.png" style="width: 90%; height: 90%;" />
+    </ion-col>
+  </ion-row>
 </ion-content>

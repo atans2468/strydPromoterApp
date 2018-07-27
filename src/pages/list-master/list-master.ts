@@ -37,14 +37,4 @@ export class ListMasterPage {
       item: item
     });
   }
-
-
-  presentPaymentToast() {
-    let paymentToast = this.toastCtrl.create({
-      message: 'Transaction successfully completed',
-      duration: 3000,
-      position: 'top'
-    });
-    paymentToast.present();
-  };
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Platform, ViewController, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import {Platform, ViewController, NavController, NavParams, ActionSheetController, ToastController } from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 
@@ -20,7 +20,7 @@ export class ItemReviewPage {
   item: any;
   //data retrieved
 
-  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public actionSheetCtrl: ActionSheetController, public toastCtrl: ToastController) {
     this.item = navParams.get('item') || items.defaultItem;
   }
 
@@ -64,6 +64,15 @@ export class ItemReviewPage {
    /**
    * process purchase and route to events page
    */
+  presentPaymentToast() {
+    let paymentToast = this.toastCtrl.create({
+      message: 'Transaction successfully completed',
+      duration: 3000,
+      position: 'top'
+    });
+    paymentToast.present();
+  };
+  
   finishSale() {
     this.navCtrl.popToRoot();
   }

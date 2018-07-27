@@ -26,24 +26,6 @@ export class MarketingDetailsPage {
     });
   };
 
-  presentRouteToast() {
-    let toast = this.toastCtrl.create({
-      message: 'Route successfully accepted',
-      duration: 3000,
-      position: 'top'
-    });
-    toast.present();
-  };
-
-  presentSocialToast() {
-    let socialToast = this.toastCtrl.create({
-      message: 'Post successfully completed',
-      duration: 3000,
-      position: 'top'
-    });
-    socialToast.present();
-  };
-
   acceptRoute() {
     let confirm = this.alertCtrl.create({
       title: 'Confirm',
@@ -58,7 +40,17 @@ export class MarketingDetailsPage {
         {
           text: 'Accept',
           handler: () => {
-            console.log('Post clicked');
+
+            //this is code for the demo version of the app
+            //this automatically present a success toast
+            //in real app this will need to be changed to trigger
+            //after successful addition of route to that user
+            let toast = this.toastCtrl.create({
+              message: 'Route successfully accepted',
+              duration: 3000,
+              position: 'top'
+            });
+            toast.present();
           }
         }
       ]

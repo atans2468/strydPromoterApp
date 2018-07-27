@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 import { Item } from '../../models/item';
@@ -13,7 +13,7 @@ export class socialPostPage {
   item: any;
   //data retrieved
 
-  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public alertCtrl: AlertController, public toastCtrl: ToastController) {
     this.item = navParams.get('item') || items.defaultItem;
   }
 
@@ -31,13 +31,25 @@ export class socialPostPage {
         {
           text: 'Post',
           handler: () => {
-            console.log('Post clicked');
+
             this.navCtrl.pop();
+            
+            //this is code for the demo version of the app
+            //this automatically present a success toast
+            //in real app this will need to be changed to trigger
+            //after successful addition of route to that user
+            let socialToast = this.toastCtrl.create({
+              message: 'Post successfully completed',
+              duration: 3000,
+              position: 'top'
+            });
+            socialToast.present();
           }
         }
       ]
     });
     confirm.present();
+
   }
 
 }

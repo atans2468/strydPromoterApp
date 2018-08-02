@@ -8,10 +8,10 @@
 
 <ion-content class="card-background-page topMargin">
   
-    <ion-card *ngFor="let item of currentVenues" (click)="openItem(venue)">
+    <ion-card *ngFor="let venue of venues" (click)="openItem(venue)">
       <img [src]="item.coverPhoto1" />
-      <div class="card-title">{{item.name}}</div>
-      <div class="card-subtitle"><b>{{item.numberOfEvents}} Events</b></div>
+      <div class="card-title">{{venue.data().venueName}}</div>
+      <!-- <div class="card-subtitle"><b>{{item.numberOfEvents}} Events</b></div> -->
     </ion-card>
 
 </ion-content>

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'; 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Camera } from '@ionic-native/camera';
 import { MyApp } from './app.component';
 import { Pro } from '@ionic/pro';
 import { Push } from '@ionic-native/push';
@@ -29,6 +30,23 @@ import { Venues } from '../mocks/providers/venues';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Facebook } from '@ionic-native/facebook'
+
+import firebase from 'firebase';
+
+const config = {
+  apiKey: "AIzaSyB5ReaoaIoJfMZW9NSz4_rlh41rJxztyRo",
+  authDomain: "strydapp.firebaseapp.com",
+  databaseURL: "https://strydapp.firebaseio.com",
+  projectId: "strydapp",
+  storageBucket: "strydapp.appspot.com",
+  messagingSenderId: "1057951127015"
+};
+
+firebase.initializeApp(config);
+firebase.firestore().settings({
+  timestampsInSnapshots: true
+})
 
 Pro.init('04dea42c', {
   appVersion: '0.0.1'
@@ -111,6 +129,8 @@ export class MyErrorHandler implements ErrorHandler {
     SplashScreen,
     Push,
     IonicErrorHandler,
+    Camera,
+    Facebook,
     [{ provide: ErrorHandler, useClass: MyErrorHandler }]
   ]
 })

@@ -7,16 +7,16 @@
 
 </ion-header>
 
-<ion-content class="topMargin" style="padding-left: 0px; background-color: #d8d9da">
+<!--<ion-content class="topMargin" style="padding-left: 0px; background-color: #d8d9da">
 
-  <ion-card *ngFor="let item of currentItems" style="width: 100%; margin-left: 0px; margin-top: 6px; margin-bottom: 0px;">
+  <!-- <ion-card *ngFor="let post of posts" style="width: 100%; margin-left: 0px; margin-top: 6px; margin-bottom: 0px;">
 
     <ion-row style="padding: 0px;">
       <ion-col col-5 style="height: 150px; padding: 0px; margin: 0px;">
-        <img [src]="item.flierImg" style="width: 100%; height: 100%;" />
+        <!-- <img [src]="item.flierImg" style="width: 100%; height: 100%;" /> --
       </ion-col>
       <ion-col col-7 style="height: 100%; width: 100%;">
-        <h2><b>{{item.name}}</b></h2>
+        <h2><b>{{post.data().owner_name}}</b></h2>
         <p>{{item.date}}</p>
         <p>Doors at {{item.doors}}</p>
         <p>{{item.venue}}</p>
@@ -36,4 +36,81 @@
     </ion-row>
 
   </ion-card>
+</ion-content> -->
+<ion-content>
+
+  <ion-refresher (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- <ion-card *ngFor="let post of posts">
+  
+    <ion-item>
+      <!-- <ion-avatar item-start>
+        <img src="img/marty-avatar.png">
+      </ion-avatar> --
+      <h2>{{post.data().eventName}}</h2>
+      <p>{{post.data().eventDate}}</p>
+    </ion-item>
+  
+    <img src="../../assets/img/stockEvent.jpg">
+  
+    <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center style="margin-top: 8px;">
+        <ion-note>
+          <p color='light'>{{ ago(post.data().created.toDate()) }} ago</p>
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card> -->
+
+  <ion-card *ngFor="let post of posts" style="width: 100%; margin-left: 0px; margin-top: 6px; margin-bottom: 0px;">
+
+    <ion-row style="padding: 0px;">
+      <ion-col col-5 style="height: 150px; padding: 0px; margin: 0px;">
+        <img src="../../assets/img/stockEvent.jpg" style="width: 100%; height: 100%;" />
+      </ion-col>
+      <ion-col col-7 style="height: 100%; width: 100%;">
+        <h2><b>{{post.data().eventName}}</b></h2>
+        <p>{{post.data().eventDate}}</p>
+        <!--<p>Doors at {{item.doors}}</p>-->
+        <p>{{post.data().owner_name}}</p>
+        <!-- <p>{{item.ages}}</p> -->
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 style="background-color: #02b1ef; height: 30px; padding: 0px;">
+          <button ion-button full clear flex-start class="sellTicketsButton" (click)="openItem(item)" style="margin: 0px; padding-left: 5px; height: 100%; color: #fff;">
+            <ion-icon name="pricetag" style="margin-right: 5px;"></ion-icon>
+            SELL TICKETS
+            <ion-icon name="arrow-forward-outline" style="position: absolute; right: 10px;"></ion-icon>
+          </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)='loadMorePosts($event)'>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>

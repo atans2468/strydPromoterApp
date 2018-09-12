@@ -74,6 +74,8 @@
         "APP_NAME": "STRYD"
       }
     },
-    "platforms": []
+    "platforms": [
+      "ios"
+    ]
   }
 }
